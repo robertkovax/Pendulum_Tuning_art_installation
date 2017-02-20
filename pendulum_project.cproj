@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>6.2</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.C</ToolchainName>
+    <ProjectGuid>{46c64bbe-4803-4eaf-848c-2fbde0b2e838}</ProjectGuid>
+    <avrdevice>ATxmega128A1</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>pendulum_project</AssemblyName>
+    <Name>pendulum_project</Name>
+    <RootNamespace>pendulum_project</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <eraseonlaunchrule>1</eraseonlaunchrule>
+    <AsfFrameworkConfig>
+      <framework-data>
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.10.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize for size (-Os)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGcc>
+        <avrgcc.common.optimization.RelaxBranches>True</avrgcc.common.optimization.RelaxBranches>
+        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+        <avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>True</avrgcc.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <avrgcc.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </avrgcc.compiler.symbols.DefSymbols>
+        <avrgcc.compiler.optimization.level>Optimize (-O1)</avrgcc.compiler.optimization.level>
+        <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
+        <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
+        <avrgcc.compiler.optimization.DebugLevel>Default (-g2)</avrgcc.compiler.optimization.DebugLevel>
+        <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
+        <avrgcc.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </avrgcc.linker.libraries.Libraries>
+        <avrgcc.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcc.assembler.debugging.DebugLevel>
+      </AvrGcc>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="avr_compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="core.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="core.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="globals.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mechanism.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="mechanism.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="pendulum_project.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="port_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="port_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\byteordering.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\byteordering.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\fat.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\fat.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\fat_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\partition.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\partition.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\partition_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\sd-reader_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\sd_raw.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\sd_raw.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard\sd_raw_config.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="sdcard_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TC_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="TC_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="xmega\avr_compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="xmega\usart_driver.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="xmega\usart_driver.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sdcard" />
+    <Folder Include="xmega" />
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>

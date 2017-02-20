@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Atmel Studio Solution File, Format Version 11.00
+Project("{54F91283-7BC4-4236-8FF9-10F437C3AD48}") = "pendulum_project", "pendulum_project.cproj", "{46C64BBE-4803-4EAF-848C-2FBDE0B2E838}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46C64BBE-4803-4EAF-848C-2FBDE0B2E838}.Debug|AVR.ActiveCfg = Debug|AVR
+		{46C64BBE-4803-4EAF-848C-2FBDE0B2E838}.Debug|AVR.Build.0 = Debug|AVR
+		{46C64BBE-4803-4EAF-848C-2FBDE0B2E838}.Release|AVR.ActiveCfg = Release|AVR
+		{46C64BBE-4803-4EAF-848C-2FBDE0B2E838}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
